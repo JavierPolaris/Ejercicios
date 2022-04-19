@@ -1,52 +1,179 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Staatliches&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Slab&family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Space+Mono&display=swap');
 
-:root {
-    --main-white: #f0f0f0;
-    --main-black: #2e2c2b;
-    --main-gray: #c9c5c3;
-    --main-whitea: #f0f0f0;
-  }
 
-  * {
+
+* {
     margin: 0;
     padding: 0;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
+}
 
-  html {
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
     box-sizing: border-box;
     font-size: 62.5%;
     scroll-behavior: smooth;
-  }
-  @media (max-width: 75em) {
-    html {
-      font-size: 60%;
-    }
-  }
-  
-  @media (max-width: 61.25em) {
-    html {
-      font-size: 58%;
-    }
-  }
-  
-  @media (max-width: 28.75em) {
-    html {
-      font-size: 55%;
-    }
-  }
+}
 
-  body {
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+body {
+    font-family: 'Staatliches', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
-    line-height: 1.4;
-    color: var(--main-black);
-  }
+    height: 1.4;
+
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    font-size: 13rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+    color: #f0f0f0;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-size: 3.2rem;
+}
+
+
+
+a {
+    color: #ffffff;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+    color: yellow;
+}
+
+
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: -100%;
+    font-family: 'Staatliches', italic;
+    font-size: 2.5rem;
+    padding: 2rem;
+    margin-right: 10rem;
+    text-decoration: none;
+
+
+}
+
+
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: 0;
+    box-shadow: 0;
+
+    background-color: rgb(44, 43, 43);
+
+
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+
+
+}
+
+@media (max-width: 28.75em) {
+    .nav {
+        justify-content: center;
+    }
+
+    .nav-list {
+        margin: 0 1rem;
+    }
+}
+
+.nav-list a {
+    display: flex;
+    font-size: 2.2rem;
+    padding: 2rem;
+    text-decoration: none;
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background-attachment: scroll;
+    background-image: url(https://www.mtbpro.es/sites/default/files/5_movimientos_mtb_1.jpg);
+    background-position: center center;
+    background-repeat: none;
+
+}
+
+.welcome-section div {
+    display: flexbox;
+
+
+
+}
+
+.container {
+    background-color: rgb(44, 43, 43);
+    padding: 10px;
+}
+
+@media (min-width: 1080px) {
+    .welcome-section div {
+        margin-right: 35rem;
+    }
+
+}
