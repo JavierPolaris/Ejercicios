@@ -4,6 +4,7 @@
 
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -59,10 +60,26 @@ h1 {
     font-size: 13rem;
 }
 
-h2 {
-    font-size: 4.2rem;
-    color: #f0f0f0;
+.h2 {
+    position: relative;
+    top: 50px;
+    left: cve;
+    font-size: 5rem;
+    
 }
+
+.bio {
+    font-size: 7.5rem;
+}
+
+.tBio p {
+    margin-top: 80px;
+    margin-left: 20px;
+    font-family: "Montserrat";
+    font-size: 2.5rem; 
+}
+
+
 
 ul {
     list-style: none;
@@ -114,7 +131,7 @@ a.active {
     width: 100%;
     background: 0;
     box-shadow: 0;
-
+    z-index: 10;
     background-color: rgb(44, 43, 43);
 
 
@@ -176,4 +193,26 @@ a.active {
         margin-right: 35rem;
     }
 
+}
+
+.imgRedonda {
+    display: flex;
+    justify-content: flex-start;
+    position:inherit;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    margin-top: 100px;
+    margin-left: 550px;
+}
+
+.niño {
+    position: relative;
+    top: 300px;
+    /* margin-top: 400px;
+    margin-right: 50px; */
+    border-radius: 150px;
+    max-width: 30%;
+    max-height: 100%;
+    float: right;
 }
