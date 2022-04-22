@@ -63,6 +63,12 @@ h1 {
     margin: 69px 512px 0px 453px;
     
 }
+.hoja1 {
+    background-color: beige;
+    margin: 269px;
+    margin: 69px 512px 0px 453px;
+    
+}
 
 .insertNum {
     display: flex;
@@ -103,6 +109,12 @@ h1 {
     width: 231px;
     margin-left: 123px;
 }
+#boton1 {
+    align-items: center;
+    justify-content: center;
+    width: 158px;
+    margin: 32px 0px 0px 159px;
+}
 
 .resu {
     display: flex;
@@ -113,9 +125,40 @@ h1 {
     padding: 20px;
     justify-content: center;
 }
+.resu1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 4px;
+    right: 4px;
+    padding: 20px;
+    justify-content: center;
+}
 
-#resultado {
+#resultado,#resultado1 {
     font-size: 2rem;
     margin-top: 10px;
     margin-left: 235px;
+}
+
+.sumaResta {
+    color: gray;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -18px;
+    right: 1px;
+    padding: 0;
+    justify-content: center;
+}
+
+#resultado2 {
+    font-size: 5rem;
+    margin-top: 10px;
+    margin-left: 6px;
+}
+#resultado3 {
+    font-size: 5rem;
+    margin-top: 10px;
+    margin-left: 37px;
 }
