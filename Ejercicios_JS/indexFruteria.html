@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="styleFruteria.css" />
+
+</head>
+
+<body>
+  <h1>FRUTERIA</h1>
+  <section>
+    <input id="fruta" type="text" placeholder="Insertar fruta..." />
+    <button id="añadir" class="añadir">
+
+      Añadir
+    </button>
+  </section>
+  <section class="listaFruta fondo">
+    <button id="borrar" onclick="remove_child()" class="button button-borrar">
+      Borrar fruta
+    </button>
+    <h2>Lista de Fruta</h2>
+    <ul id="list" class="listaFruta">
+      <li>Melocotón</li>
+      <li>Naranja</li>
+      <li>Kiwi</li>
+    </ul>
+  </section>
+
+  <script src="codigoFrutería.js"></script>
+
+</body>
+
+</html>
