@@ -10,15 +10,24 @@
 <body>
 <nav>
   <ul>
-    <li onclick="saludar()">
-      Saludar
+    <input type="text" name="frutero" id="frutero" placeholder=" añade fruta">
+  </ul>
+  <ul>
+    <button onclick="añadirFruta(event);">
+    <li>
+      Añadir
       <span></span><span></span><span></span><span></span>
     </li>
-    <li onclick="daspedir()"> 
-     Despedir
+  </button>
+    <li onclick="borrarFruta()"> 
+     Borrar
       <span></span><span></span><span></span><span></span>
     </li>
   </ul>
+  <div>
+    <ul id="lista-fruta"></ul>
+  </div>
+
 </nav>
 <script src="/Ejercicios_JS/codigo.js"></script>
 </body>
