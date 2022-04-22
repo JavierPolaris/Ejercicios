@@ -12,9 +12,9 @@ document.querySelector('#boton').addEventListener('click', () => {
 
     let resultado;
     if(operacion == '+'){
-        resultado = numero1 + numero2;
+        resultado = n1 + n2;
     }else if(operacion == '-') {
-        resultado = numero1 - numero2;
+        resultado = n1 - n2;
     }else{
         alert("que estas haciendo inutil!!!")
     }
