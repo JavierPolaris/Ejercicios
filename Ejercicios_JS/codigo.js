@@ -14,6 +14,8 @@ function borrarFruta() {
 };
 
 
+
+
 // function añadirFruta(evt) {
 //     evt.preventDefault();
   
