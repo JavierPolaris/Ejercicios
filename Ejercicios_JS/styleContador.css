@@ -148,11 +148,12 @@ h2 {
 #resultado,#resultado1 {
     font-size: 5rem;
     /* position: fixed; */
-    margin-top: 463px;
-    margin-left: 775px;
+    /* margin-top: 462px; */
+    margin-left: 213px;
     /* margin-left: 216px; */
     color: white;
 }
+
 
 
 .sumaResta {
