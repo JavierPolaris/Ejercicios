@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Slab&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Space+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+body {
+    font-family: 'Staatliches', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    height: 1.4;
+    background-image: url(https://guardian.ng/wp-content/uploads/2020/08/EDUCATION.jpg);
+    background-size: cover;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    display: flex;
+    margin-left: 44px;
+    flex-wrap: nowrap;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 30px;
+    color: gray;
+}
+
+.nav {
+    background-color: rgb(244 220 55);
+
+}
+
+img {
+    width: 175px;
+    height: 175px;
+    display: flex;
+}
+
+.hoja {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 10px 25px rgb(0 0 0);
+    margin: 269px;
+    margin: 69px 512px 0px 453px;
+    
+}
+
+
+.insertNum {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    top: 17px;
+    left: 0px;
+    padding: 20px;
+    
+}
+
+#email, #password, #button {
+   
+    margin-top: 27px;
+    margin-bottom: -23px;
+    width: 22em;
+    height: 3em;
+}
+
+.oper {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: 17px;
+    left: 0px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.botones {
+    margin-top: 55px;
+}
+
+#boton {
+    align-items: center;
+    justify-content: center;
+    width: 231px;
+    margin-left: 123px;
+}
+#boton1 {
+    align-items: center;
+    justify-content: center;
+    width: 158px;
+    margin: 32px 0px 0px 159px;
+}
+
+.resu {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: 17px;
+    left: 0px;
+    padding: 20px;
+    justify-content: center;
+}
+.resu1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 4px;
+    right: 4px;
+    padding: 20px;
+    justify-content: center;
+}
+
+#resultado,#resultado1 {
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-left: 235px;
+}
+
+.sumaResta {
+    color: gray;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -18px;
+    right: 1px;
+    padding: 0;
+    justify-content: center;
+}
+
+#resultado2 {
+    font-size: 5rem;
+    margin-top: 10px;
+    margin-left: 6px;
+}
+#resultado3 {
+    font-size: 5rem;
+    margin-top: 10px;
+    margin-left: 37px;
+}
