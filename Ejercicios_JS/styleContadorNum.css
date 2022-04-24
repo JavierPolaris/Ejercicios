@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Space+Mono&display=swap');
 
+
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -41,7 +51,7 @@ body {
     font-size: 1.8rem;
     font-weight: 400;
     height: 1.4;
-    background-image: url(https://pbs.twimg.com/media/EUiTUwrWAAIlKkz.jpg);
+    background-image: url(https://cloudfront-us-east-1.images.arcpublishing.com/infobae/WKTVUEZJ55BLLJOBZEFVYJAIIA.jpg);
     background-size: cover;
     background-position-y: 89px;
 }
@@ -65,8 +75,15 @@ h2 {
     margin-right: 19px;
 }
 
+p {
+    margin-left: -13px;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #6e728f;
+}
+
 .hoja {
-    background-color: #e9a2a2;
+    background-color: #fedfdd;
     border: 5px solid white;
     border-radius: 19px;
     margin: 269px;
@@ -86,8 +103,10 @@ h2 {
     align-items: flex-start;
     position: relative;
     top: 20px;
-    left: 77px;
-    padding: 20px;
+    width: 286px;
+    left: 86px;
+    padding: 11px;
+
 }
 
 #numero1, #numero2, #suma, #resta, #boton {
@@ -146,12 +165,16 @@ h2 {
 }
 
 #resultado,#resultado1 {
-    font-size: 5rem;
+        /* font-size: 5rem; */
     /* position: fixed; */
-    /* margin-top: 462px; */
-    margin-left: 213px;
-    /* margin-left: 216px; */
+    /* margin-top: -23px; */
+    /* margin-left: 213px; */
+    /* margin-left: -39px; */
     color: white;
+}
+ul {
+    margin-left: 158px;
+    font-size: 3rem;
 }
 
 
