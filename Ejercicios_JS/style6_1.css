@@ -1,0 +1,129 @@
+
+/* ------- CONTENEDOR ---------*/
+#contenedor {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    /* La URL de la textura es: (buscamos en Google fondos web blue) 
+    www.miswallpapers.net/2008-
+    2009Walls/varios/wallpaper_97_Blue_lines_1600x1200.jpg */
+    background-image: url('../img/textura.jpg');
+}
+
+/* ################## CAJAS PRINCIPALES #################### */
+#cabecera, #menu, #lateral, #contenido, #principal, #secundario, #pie {
+    border: 2px solid #777;
+}
+
+#noticias,#publicidad,#principal,#secundario {
+    padding: 0.1em;
+}
+
+#cabecera,
+#menu {
+    clear: both;
+}
+
+/* --------- CABECERA ---------*/
+#cabecera {
+    padding: 1em;
+}
+
+#logo {
+    float: left;
+}
+
+#buscador {
+    float: right;
+}
+
+/* -------- MENU SUPERIOR -----------*/
+#menu {
+    padding: 0.5em;
+}
+
+#menu ul,
+#menu li {
+    display: inline;
+    float: left;
+}
+
+/* -------- CAJA LATERAL ----------- */
+#lateral {
+    float: left;
+    width: 20%;
+}
+
+#publicidad {
+    margin-top: 1em;
+}
+
+/* ############ CAJA CONTENIDO ############# */
+#contenido {
+    float: right;
+    width: 78%;
+}
+
+/* --------- CAJA PRINCIPAL --------*/
+#principal {
+    float: left;
+    width: 68%;
+}
+
+img {
+    border: none;
+}
+
+.articulo img {
+    width: 100px;
+    float: left;
+    padding: 0.5em;
+}
+
+.articulo {
+    font-size: 15px;
+    padding-bottom: 1em;
+    /* display: flex; */
+
+}
+
+/* -------------- COLUMNA DERECHA -----------*/
+#secundario {
+    float: right;
+    /*se ha cambiado de left a right*/
+    width: 25%;
+}
+
+/* ############ FIN CAJA CONTENIDO ############# */
+/* ------------ CAJA PIE ------------*/
+#pie {
+    margin-top: 1em;
+    clear: both;
+    padding: 0.1em 0 0.1em 0;
+}
+
+#pie .enlaces {
+    float: left;
+}
+
+#pie .copyright {
+    float: right;
+}
+
+/* ######## REGLAS GENÉRICAS ####### */
+ul,
+ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,h3,p,form {
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+ 

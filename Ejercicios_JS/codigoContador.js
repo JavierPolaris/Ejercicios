@@ -1,5 +1,6 @@
 document.querySelector("#boton1").addEventListener('click', () => {
-    var cadena = document.querySelector('#frase').value;
+    // var cadena = document.querySelector('#frase').value;
+    var cadena = document.getElementById('frase').value;
     
     var indices = [];
     for(var i = 0; i < cadena.length; i++) {
