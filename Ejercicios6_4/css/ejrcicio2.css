@@ -1,0 +1,13 @@
+.letras {
+    display: flex;
+    position: fixed;
+    margin-top: 10px;
+    
+}
+
+.botonera {
+    margin-top: 98px;
+}
+p {
+    margin-left: 21px;
+}
