@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    border: 1px solid black;
+    margin: 10px;
+    
+}
+
+.letras {
+    display: flex;
+    /* position: fixed; */
+    margin-top: -14px;
+    
+}
+
+#frase {
+        /* padding-left: 265px; */
+        width: 499px;
+}
+p {
+    margin-left: 10px;
+}

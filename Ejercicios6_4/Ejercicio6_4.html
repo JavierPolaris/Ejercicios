@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Ejercicios6_4/estilos.css">
+    <title>Ejercicio 6_4</title>
+</head>
+<body>
+<!-- Ejercico 1 -->
+    <div class="ejercicio1">
+        <h1 class="primer">¿Cual es mayor de los 3?</h1>
+        <input type="text" id="numero1" placeholder="Numero 1">
+        <input type="text" id="numero2" placeholder="Numero 2">
+        <input type="text" id="numero3" placeholder="Numero 3">
+	    <button onclick="menor()">Averigua cuál es el menor</button> 
+	    <button onclick="mayor()">Averigua cuál es el mayor</button> 
+        <output id="resultado1"> </output>
+        <output id="resultado2"> </output>
+    </div>
+<!-- Ejercicio 2 -->
+    <div class="ejercicio2">
+        <form id="formulario">
+            <h1 class="primer">Contador de letras</h1>
+            <input type="text" id="frase" placeholder="En la casa de pepito..." required>
+            <h2 class="subCabeza2">
+                Selecciona la letra que quieres contar.
+            </h2>
+            <div class="letras">
+                <p>A: <input type="radio" name="a" id="a" value="a">
+                <p>B: <input type="radio" name="b" id="b" value="b">
+                <p>C: <input type="radio" name="c" id="c" value="c">
+                <p>D: <input type="radio" name="d" id="d" value="d">
+                <p>E: <input type="radio" name="e" id="e" value="e">
+                <p>F: <input type="radio" name="f" id="f" value="f">
+                <p>G: <input type="radio" name="g" id="g" value="g">
+                <p>H: <input type="radio" name="h" id="h" value="h">
+                <p>I: <input type="radio" name="i" id="i" value="i">
+                <p>J: <input type="radio" name="j" id="j" value="j">
+                <p>K: <input type="radio" name="k" id="k" value="k">
+                <p>L: <input type="radio" name="l" id="l" value="l">
+                <p>M: <input type="radio" name="m" id="m" value="m">
+                <p>N: <input type="radio" name="n" id="n" value="n">
+                <p>Ñ: <input type="radio" name="ñ" id="ñ" value="ñ">
+                <p>O: <input type="radio" name="o" id="o" value="o">
+                <p>P: <input type="radio" name="p" id="p" value="p">
+                <p>Q: <input type="radio" name="q" id="q" value="q">
+                <p>R: <input type="radio" name="r" id="r" value="r">
+                <p>S: <input type="radio" name="s" id="s" value="s">
+                <p>T: <input type="radio" name="t" id="t" value="t">
+                <p>U: <input type="radio" name="u" id="u" value="u">
+                <p>V: <input type="radio" name="v" id="v" value="v">
+                <p>W: <input type="radio" name="w" id="w" value="w">
+                <p>X: <input type="radio" name="x" id="x" value="x">
+                <p>Y: <input type="radio" name="y" id="y" value="y">
+                <p>Z: <input type="radio" name="z" id="z" value="z">
+            </div>
+
+
+
+    </section>
+    <section class="botonera">
+        <button id="boton" class="boton">Enviar</button>
+        <h2 class="resu1">Resultado: </h2>
+        <output id="resultado3"></output>
+        </form>
+    </section>
+
+    </div>
+<!-- Ejercicio 3 -->
+    <div class="ejercicio3">
+        <form action="">
+            <h1 class="primer">Sumas o Restas</h1>
+            <input id=primerNumero type="texto" placeholder="primer número" required>
+            <input id=segundoNumero type="texto" placeholder="segudo número" required>
+            <button id="plus">+</button>   
+            <button id="minus">-</button>
+            <button id="answer">Resultado</button>
+            <output id="resultado"></output>
+        </form>
+    </div>
+<!-- Ejercicio 4 -->
+    <div class="ejercicio4">
+        <form action="">
+            <h1 class="primer">Validar usuario</h1>
+            <input type="email" id="email" placeholder="agustina@prima.com" >
+            <input type="password" id="password" placeholder="password" >
+            <button id="login">LogIn</button>
+            <output id="campoOK"></output>
+        </form>
+    </div>
+<!-- Ejercicio 5 -->
+    <div class="ejercicio5">
+    <h1 class="primer">¿Que valor tiene?</h1>
+        <input type="text" id="letra" placeholder="Introduzca unan letra">
+    <button id='resultado4'>Qué valor tiene la letra?</button>
+    <output id="valor"></output>
+    </div>
+<!-- Ejercicio 6 -->
+    <div class="ejercicio6">
+        <h1 class="primer">Ordenar alfabéticamente</h1>
+        <input type="text" name="orden" id="orden" placeholder="escribe tu frase">
+        <button id="ordenar">Ordenar</button>
+        
+    <h3>Lista Ordenada alfabéticamente</h3>
+        <p id="letras"></p>
+    </div>
+
+
+
+
+
+    <script src="/Ejercicios6_4/Ejercicio6_4.js"></script>
+</body>
+</html>

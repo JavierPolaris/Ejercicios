@@ -1,3 +1,7 @@
+// 4. Almacena en dos variables datos de validación (usuario y contraseña) correctos y permite que el usuario valide (dispone de 3 intentos)
+// En caso de error en el usuario O en el password devolver mensaje de error: "Datos incorrectos".
+// En caso de que gastar todos los intentos dar un mensaje de  : "En 15 minutos podrás volver a loguearte".
+
 var btn = document.getElementById('login');
 var clave = document.getElementById('password');
 var usuario = document.getElementById('email');
@@ -34,6 +38,7 @@ btn.addEventListener('click', (evt) => {
           return false;
       
       }
+
     
     }
 
