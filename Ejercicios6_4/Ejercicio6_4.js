@@ -92,6 +92,7 @@ document.getElementById('boton').addEventListener('click', (e) => {
 
 
     var resultado = [];
+    
     if (letraA == true) {
         for (var i = 0; i < cadena.length; i++) {
             if (cadena[i].toLowerCase() === 'a') resultado.push(i);
@@ -337,8 +338,22 @@ document.getElementById("letras").innerHTML = arr;
 
 })
 
+//------------------>Final ejercicio 6
+
+// -----------Ejercicio 7
 
 
+document.getElementById('botonEn').addEventListener('click', (e)=> {
+    e.preventDefault();
+    var cadena = parseInt(document.getElementById('entero').value);
+
+    resultado = ('' + cadena).length;
+
+    
+   console.log(resultado)
+   document.getElementById("enteros").innerHTML = resultado;
+
+})
 
 
 
