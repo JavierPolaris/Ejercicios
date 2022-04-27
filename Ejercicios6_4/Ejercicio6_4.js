@@ -92,8 +92,8 @@ document.getElementById('boton').addEventListener('click', (e) => {
 
 
     var resultado = [];
-    
-    if (letraA == true) {
+
+    if (letraA) {
         for (var i = 0; i < cadena.length; i++) {
             if (cadena[i].toLowerCase() === 'a') resultado.push(i);
         };
@@ -101,7 +101,7 @@ document.getElementById('boton').addEventListener('click', (e) => {
         for (var i = 0; i < cadena.length; i++) {
             if (cadena[i].toLowerCase() === 'b') resultado.push(i);
         };
-    } else if (letraC == true) {
+    } else if (letraC) {
         for (var i = 0; i < cadena.length; i++) {
             if (cadena[i].toLowerCase() === 'c') resultado.push(i);
         };
@@ -317,24 +317,24 @@ document.getElementById('resultado4').addEventListener('click', (e) => {
 
 // -----------Ejercicio 6
 
-document.getElementById('ordenar').addEventListener('click', (e)=> {
+document.getElementById('ordenar').addEventListener('click', (e) => {
     e.preventDefault();
     var frase = document.getElementById('orden').value;
     var arr = frase.split(' ');
     console.log(arr)
 
     let aux;
-    for(let i = 0;i <= arr.length; i++){
-        for(let x = 0; x <= arr.length; x++){
-            if (frase[x] > arr[x+1]){
-                aux = arr[x+1];
-                arr[x+1] = arr[x];
+    for (let i = 0; i <= arr.length; i++) {
+        for (let x = 0; x <= arr.length; x++) {
+            if (frase[x] > arr[x + 1]) {
+                aux = arr[x + 1];
+                arr[x + 1] = arr[x];
                 arr[x] = aux;
             }
         }
     }
-console.log(arr);
-document.getElementById("letras").innerHTML = arr;
+    console.log(arr);
+    document.getElementById("letras").innerHTML = arr;
 
 })
 
@@ -343,17 +343,38 @@ document.getElementById("letras").innerHTML = arr;
 // -----------Ejercicio 7
 
 
-document.getElementById('botonEn').addEventListener('click', (e)=> {
+document.getElementById('botonEn').addEventListener('click', (e) => {
     e.preventDefault();
-    var cadena = parseInt(document.getElementById('entero').value);
+    var cadena = document.getElementById('entero').value;
 
-    resultado = ('' + cadena).length;
+ 
 
-    
-   console.log(resultado)
-   document.getElementById("enteros").innerHTML = resultado;
+    // let resultado = ('' + cadena).length;
+    // let recorte = cadena.slice(1);
+    // console.log(recorte)
+
+    let resultado1 = [];
+ 
+
+    for (let i = 0; i < cadena.length; i++) {
+        if (cadena[i] == '-') {
+            resultado1 = cadena.slice(1);
+            console.log(resultado1)
+            document.getElementById("enteros").innerHTML = resultado1.length;
+         
+        }
+        
+           
+        // document.getElementById("enteros").innerHTML = cadena.length;
+    } 
+}  
 
 })
+
+
+
+
+
 
 
 
