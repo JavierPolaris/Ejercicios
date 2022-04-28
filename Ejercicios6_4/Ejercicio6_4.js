@@ -371,6 +371,20 @@ document.getElementById('botonEn').addEventListener('click', (e) => {
 
 // -----------Ejercicio 8
 
+document.getElementById('botonCad').addEventListener('click', (e) => {
+    e.preventDefault();
+    var cadena = document.getElementById('number').value;
+
+    console.log(cadena)
+    // var newAste=[];
+    for (let i = 0; i = cadena; i++) {
+        console.log(i)
+        
+        
+    }
+//    console.log(newAste);
+});
+
 
 
 
