@@ -347,29 +347,32 @@ document.getElementById('botonEn').addEventListener('click', (e) => {
     e.preventDefault();
     var cadena = document.getElementById('entero').value;
 
- 
-
-    // let resultado = ('' + cadena).length;
-    // let recorte = cadena.slice(1);
-    // console.log(recorte)
-
-    let resultado1 = [];
- 
-
-    for (let i = 0; i < cadena.length; i++) {
-        if (cadena[i] == '-') {
-            resultado1 = cadena.slice(1);
-            console.log(resultado1)
-            document.getElementById("enteros").innerHTML = resultado1.length;
-         
-        }
-        
-           
-        // document.getElementById("enteros").innerHTML = cadena.length;
-    } 
-}  
+    var newCadena = [];
+    var contador = 0;
+ for (let i = 0; i < cadena.length; i++) {
+     if (cadena[i] != '-') {
+         newCadena.push(i);
+         console.log(newCadena.length)
+         document.getElementById("enteros").innerHTML = newCadena.length;
+     }else if(cadena[i] == '-'){
+        cadena.slice(1);
+        console.log(cadena.length)
+        document.getElementById("enteros").innerHTML = cadena.length;
+     }else{
+         alert('algo estas haciendo mal')
+     }
+     
+ }
 
 })
+
+
+//------------------>Final ejercicio 7
+
+// -----------Ejercicio 8
+
+
+
 
 
 
