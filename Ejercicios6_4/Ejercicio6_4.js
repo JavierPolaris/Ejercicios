@@ -349,20 +349,20 @@ document.getElementById('botonEn').addEventListener('click', (e) => {
 
     var newCadena = [];
     var contador = 0;
- for (let i = 0; i < cadena.length; i++) {
-     if (cadena[i] != '-') {
-         newCadena.push(i);
-         console.log(newCadena.length)
-         document.getElementById("enteros").innerHTML = newCadena.length;
-     }else if(cadena[i] == '-'){
-        cadena.slice(1);
-        console.log(cadena.length)
-        document.getElementById("enteros").innerHTML = cadena.length;
-     }else{
-         alert('algo estas haciendo mal')
-     }
-     
- }
+    for (let i = 0; i < cadena.length; i++) {
+        if (cadena[i] != '-') {
+            newCadena.push(i);
+            console.log(newCadena.length)
+            document.getElementById("enteros").innerHTML = newCadena.length;
+        } else if (cadena[i] == '-') {
+            cadena.slice(1);
+            console.log(cadena.length)
+            document.getElementById("enteros").innerHTML = cadena.length;
+        } else {
+            alert('algo estas haciendo mal')
+        }
+
+    }
 
 })
 
@@ -375,17 +375,63 @@ document.getElementById('botonCad').addEventListener('click', (e) => {
     e.preventDefault();
     var cadena = document.getElementById('number').value;
 
-    console.log(cadena)
-    // var newAste=[];
-    for (let i = 0; i = cadena; i++) {
-        console.log(i)
-        
-        
+
+    let resultado1 = '';
+    for (let i = 1; i <= cadena; ++i) {
+
+        resultado1 += '* ';
+
     }
-//    console.log(newAste);
+    document.getElementById('cadena').innerHTML = resultado1
+
 });
 
+//------------------>Final ejercicio 8
 
+// -----------Ejercicio 9  NO ME PUTO SALE
+document.getElementById('carac').addEventListener('click', (e) => {
+    e.preventDefault();
+    var cant = document.getElementById('number1').value;
+
+    
+    for (let i = 1; i <= cant; i++) {
+        var resultado = '';
+        
+            if (i <= 1) {
+                resultado = '* ';
+                
+                }else if (i = 2){
+                resultado = '*+ '
+                
+                }else if (i = 3){
+                resultado = '*+_ '
+               
+                }
+        
+        console.log(resultado)   
+    }
+
+})
+
+//------------------>Final ejercicio 9
+
+// -----------Ejercicio 10
+
+document.getElementById('arbol').addEventListener('click', (e) => {
+    e.preventDefault();
+    var arb = document.getElementById('number2').value;
+
+    for (let i = 1; i <= arb; i++) {
+        var arbol = '';
+        for (let j = 1; j <= i; j++) {
+            arbol += '* ';
+            
+        }
+        console.log(arbol)
+    }
+
+
+})
 
 
 
