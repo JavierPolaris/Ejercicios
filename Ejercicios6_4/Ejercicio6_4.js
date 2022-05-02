@@ -388,28 +388,26 @@ document.getElementById('botonCad').addEventListener('click', (e) => {
 
 //------------------>Final ejercicio 8
 
-// -----------Ejercicio 9  NO ME PUTO SALE
+// -----------Ejercicio 9  
 document.getElementById('carac').addEventListener('click', (e) => {
     e.preventDefault();
     var cant = document.getElementById('number1').value;
 
     
-    for (let i = 1; i <= cant; i++) {
-        var resultado = '';
-        
-            if (i <= 1) {
-                resultado = '* ';
-                
-                }else if (i = 2){
-                resultado = '*+ '
-                
-                }else if (i = 3){
-                resultado = '*+_ '
-               
-                }
-        
-        console.log(resultado)   
-    }
+        let cad = "";
+        let n;
+        for (let i = 0; i < cant; i++) {
+            n = i % 3;
+            if (n == 0) {
+                cad = cad +"*";
+            } else if (n == 1) {
+                cad = cad +"+";
+            } else {
+                cad = cad +"_";
+            }
+        }
+       document.getElementById('cadena1').innerHTML = cad;
+    
 
 })
 
@@ -428,6 +426,7 @@ document.getElementById('arbol').addEventListener('click', (e) => {
             
         }
         console.log(arbol)
+        document.getElementById('cadena2').innerHTML = arbol;
     }
 
 
