@@ -432,7 +432,20 @@ document.getElementById('arbol').addEventListener('click', (e) => {
 
 })
 
+// -----------Ejercicio 11
 
+//pasar de mayusculas a minusculas
+
+function minusculas(frase){
+    let resultado = '';
+    for (letra of frase) {
+        letra = String.fromCharCode(letra.charCodeAt() + ('a'.charCodeAt()- 'A'.charCodeAt()));
+        resultado += letra;
+        console.log(resultado);
+        
+    }
+}
+minusculas('ESTA ES LA FRASE');
 
 
 
