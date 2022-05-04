@@ -418,34 +418,73 @@ document.getElementById('carac').addEventListener('click', (e) => {
 document.getElementById('arbol').addEventListener('click', (e) => {
     e.preventDefault();
     var arb = document.getElementById('number2').value;
-
+    var arbol = '';
     for (let i = 1; i <= arb; i++) {
-        var arbol = '';
+        
         for (let j = 1; j <= i; j++) {
             arbol += '* ';
+        
             
-        }
-        console.log(arbol)
-        document.getElementById('cadena2').innerHTML = arbol;
+        };
+        arbol += "\n";
+        // console.log(arbol)
+        
+       
     }
 
-
+    alert (arbol);
 })
+//------------------>Final ejercicio 10
 
 // -----------Ejercicio 11
+document.getElementById('dias').addEventListener('click', () => {
+    let dia1 = document.getElementById('dia1').value;
+    dia1 = Number(dia1);
+    let mes1 = document.getElementById('mes1').value;
+    mes1 = Number(mes1);
+    let año1 = document.getElementById('año1').value;
+    año1 = Number(año1);
+    let dia2 = document.getElementById('dia2').value;
+    dia2 = Number(dia2);
+    let mes2 = document.getElementById('mes2').value;
+    mes2 = Number(mes2);
+    let año2 = document.getElementById('año2').value;
+    año2 = Number(año2);
+
+
+    const meses = [31,28,31,30,31,30,31,31,30,31,30,31];
+    
+
+
+    let dias = meses[mes1 - 1] - dia1 + dia2;
+    dias = Number(dias);
+    
+    for (let i = mes1; i < mes2 - 1; i++) {
+        dias = dias + meses[i];
+        
+    };
+
+    
+    alert(`Quedan ${dias} hasta la fecha`)
+    document.getElementById('fecha').innerHTML = `Quedan ${dias} hasta la fecha`
+})
+
+//------------------>Final ejercicio 11
+
+// -----------Ejercicio 12
 
 //pasar de mayusculas a minusculas
 
-function minusculas(frase){
-    let resultado = '';
-    for (letra of frase) {
-        letra = String.fromCharCode(letra.charCodeAt() + ('a'.charCodeAt()- 'A'.charCodeAt()));
-        resultado += letra;
-        console.log(resultado);
+// function minusculas(frase){
+//     let resultado = '';
+//     for (letra of frase) {
+//         letra = String.fromCharCode(letra.charCodeAt() + ('a'.charCodeAt()- 'A'.charCodeAt()));
+//         resultado += letra;
+//         console.log(resultado);
         
-    }
-}
-minusculas('ESTA ES LA FRASE');
+//     }
+// }
+// minusculas('ESTA ES LA FRASE');
 
 
 
