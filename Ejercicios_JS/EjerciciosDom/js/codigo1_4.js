@@ -1,13 +1,17 @@
 //pos 0 = 500; y ultima casilla importe total
+//Todos los datos tienen que venir de un formulario (input):
+//Introduccion de datos:
+//pos 0 = 500; y ultima casilla importe total
+let caja = [0, 0, 0, 1, 4, 8, 2, 5, 4, 0, 0, 1, 2, 3, 1, 0.0]; // Estan colocados en orden  descendente.
 
-let caja = [0, 0, 0, 1, 4, 8, 2, 5, 4, 0, 0, 1, 2, 3, 1, 0.0];
-
-const precioArticulo = 1500;
-
-let pago = [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.0];
-
+const precioArticulo = 1050;
+    
+let pago = [2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.0];
+     
 let devolucion = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.0];
-
+      
+  
+// La función dineroTotal hace un sumatorio y multipliación del dinero total en la caja o en el pago.
 function dineroTotal(dinero) {
   for (let i = 0; i < dinero.length - 1; i++) {
     if (dinero[i] != 0) {
@@ -60,19 +64,22 @@ function dineroTotal(dinero) {
       }
     }
   }
+// Usamos en metodo toFixed para redondear a dos decimales.
   dinero[dinero.length - 1] = dinero[dinero.length - 1].toFixed(2);
 }
+ // Nos muestra cuanto dinero total hay en caja y cuanto dinero me han pagado en total.
 dineroTotal(pago);
 dineroTotal(caja);
-// console.log(pago);
-// console.log(caja);
+  
+  
+// Creamos un string que nos devuelve cuantos billetes o monedas tenemos en la caja.(Por seprado).
 function mostrarDinero(dinero) {
   let mostrar = "";
   for (let i = 0; i < dinero.length - 1; i++) {
     if (dinero[i] != 0) {
       switch (i) {
         case 0:
-          mostrar += "Hay " + dinero[i] + " billetes de 500 \n";
+          mostrar += "Hay " + dinero[i] + " billetes de 500 \n"; // \n salto de linea.
           break;
         case 1:
           mostrar += "Hay " + dinero[i] + " billetes de 200 \n";
@@ -122,8 +129,10 @@ function mostrarDinero(dinero) {
   if (mostrar == "") {
     mostrar = "Su cambio es 0";
   }
-  alert(mostrar);
+  alert(mostrar); // Nos muestra la cantidad total de monedas y billetes(junto).
 }
+  
+// Nos devuelve la posición del array donde tengo que mirar. Para saber cuanto tengo que devolver.
 function rangoDevolucion(importeDevolucion) {
   if (importeDevolucion >= 500) {
     return 0;
@@ -157,6 +166,8 @@ function rangoDevolucion(importeDevolucion) {
     return 14;
   }
 }
+
+// Necesitamos traducir las posiciones a importes en euros o centimos.
 function valorPosicion(posicion) {
   switch (posicion) {
     case 0:
@@ -206,26 +217,27 @@ function valorPosicion(posicion) {
       break;
   }
 }
-devolucion[devolucion.length - 1] = pago[pago.length - 1] - precioArticulo;
-devolucion[devolucion.length - 1] = devolucion[devolucion.length - 1].toFixed(2);
-console.log(devolucion[devolucion.length-1])
-console.log(caja[caja.length - 1])
-if (devolucion[devolucion.length - 1] == 0) {
+ // Nos devuelve cual es el cambio.
+devolucion[devolucion.length - 1] = pago[pago.length - 1] - precioArticulo; 
+// Aplicamos el metodo toFixed para redondear a dos decinmales.
+devolucion[devolucion.length - 1] = devolucion[devolucion.length - 1].toFixed(2); 
+
+if (devolucion[devolucion.length - 1] == 0) { // Caso de devolucion 0 o pago justo.
   console.log("Gracias, vuelva pronto ");
   mostrarDinero(devolucion);
 } else {
-  if (devolucion[devolucion.length - 1] > caja[caja.length - 1]) {
-    console.log("No hay dineros en caja");
+  if (devolucion[devolucion.length - 1] > caja[caja.length - 1]) { // No tenemos suficiente liquidez o dinero en caja para devolver el cambio.
+    console.log("Me falta dinero");
   } else {
-    if (pago[pago.length - 1] < precioArticulo) {
+    if (pago[pago.length - 1] < precioArticulo) { // Pago insuficiente.
       console.log("Importe insuficiente");
-    } else {
-      for (
-        let i = rangoDevolucion(devolucion[devolucion.length - 1]);
+    } else {                                     // Tenemos dinero para devolver.
+      for ( 
+        let i = rangoDevolucion(devolucion[devolucion.length - 1]);   // ¿? Explicar que hace este for y comentarlo:
         i < caja.length - 1;
         i++
       ) {
-        if (caja[i] != 0) {
+        if (caja[i] != 0) { 
           let valorPosicion1 = valorPosicion(i);
           if (caja[i] * valorPosicion1 >= devolucion[devolucion.length - 1]) {
             let cantidad = Math.floor(
@@ -247,13 +259,3 @@ if (devolucion[devolucion.length - 1] == 0) {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
