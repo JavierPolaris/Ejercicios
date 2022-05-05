@@ -234,7 +234,7 @@ document.getElementById('answer').addEventListener('click', (e) => {
     var n1 = parseInt(document.getElementById('primerNumero').value);
     var n2 = parseInt(document.getElementById('segundoNumero').value);
 
-    var resultado;
+    var resultado; 
     if (operacion1) {
         resultado = n1 + n2;
 

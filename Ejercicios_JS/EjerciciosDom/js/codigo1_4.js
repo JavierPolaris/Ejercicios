@@ -1,4 +1,4 @@
-//pos 0 = 500; y ultima casilla importe total
+
 //Todos los datos tienen que venir de un formulario (input):
 //Introduccion de datos:
 //pos 0 = 500; y ultima casilla importe total
@@ -234,6 +234,7 @@ if (devolucion[devolucion.length - 1] == 0) { // Caso de devolucion 0 o pago jus
     } else {                                     // Tenemos dinero para devolver.
       for ( 
         let i = rangoDevolucion(devolucion[devolucion.length - 1]);   // ¿? Explicar que hace este for y comentarlo:
+        //nos recorre cada hueco de nuestra caja(array) donde miramos que devolvemos y termina cuando recorre el dinero que tenemos en caja.
         i < caja.length - 1;
         i++
       ) {
