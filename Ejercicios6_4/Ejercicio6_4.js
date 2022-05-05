@@ -17,7 +17,7 @@ function menor() {
         alert('los 3 numeros introducidos son iguales, pardillo');
     } else {
         console.log('Algo estas haciendo mal')
-    };
+    }; 
 }
 
 //Función clasica
@@ -437,37 +437,70 @@ document.getElementById('arbol').addEventListener('click', (e) => {
 //------------------>Final ejercicio 10
 
 // -----------Ejercicio 11
-document.getElementById('dias').addEventListener('click', () => {
-    let dia1 = document.getElementById('dia1').value;
-    dia1 = Number(dia1);
-    let mes1 = document.getElementById('mes1').value;
-    mes1 = Number(mes1);
-    let año1 = document.getElementById('año1').value;
-    año1 = Number(año1);
-    let dia2 = document.getElementById('dia2').value;
-    dia2 = Number(dia2);
-    let mes2 = document.getElementById('mes2').value;
-    mes2 = Number(mes2);
-    let año2 = document.getElementById('año2').value;
-    año2 = Number(año2);
+
+document.getElementById('dias').addEventListener('click', ()=> {
+    let entrada = document.getElementById('entrada').value;
+    let salida = document.getElementById('salida').value;
+   
 
 
-    const meses = [31,28,31,30,31,30,31,31,30,31,30,31];
+    let entradaOb = new Date(entrada)
+    let salidaOb = new Date(salida)
+
+    let diferencia = entradaOb - salidaOb;
+
+    let difeDi = diferencia / (1000*60*60*24);
     
-
-
-    let dias = meses[mes1 - 1] - dia1 + dia2;
-    dias = Number(dias);
+   let convertString = difeDi.toString();
+   
+    let magic = [];
+    for (let i = 0; i < convertString.length; i++) {
+         if(convertString[i] == "-"){
+           
+           convertString.replace('-')
+        }else{
+            magic.push(convertString[i])
+        }
+        }
+       
+        let resultado = magic.toString()
+        console.log(resultado.replace(/,/g,''))
     
-    for (let i = mes1; i < mes2 - 1; i++) {
-        dias = dias + meses[i];
-        
-    };
-
-    
-    alert(`Quedan ${dias} hasta la fecha`)
-    document.getElementById('fecha').innerHTML = `Quedan ${dias} hasta la fecha`
 })
+
+
+
+// document.getElementById('dias').addEventListener('click', () => {
+//     let dia1 = document.getElementById('dia1').value;
+//     dia1 = Number(dia1);
+//     let mes1 = document.getElementById('mes1').value;
+//     mes1 = Number(mes1);
+//     let año1 = document.getElementById('año1').value;
+//     año1 = Number(año1);
+//     let dia2 = document.getElementById('dia2').value;
+//     dia2 = Number(dia2);
+//     let mes2 = document.getElementById('mes2').value;
+//     mes2 = Number(mes2);
+//     let año2 = document.getElementById('año2').value;
+//     año2 = Number(año2);
+
+
+//     const meses = [31,28,31,30,31,30,31,31,30,31,30,31];
+    
+
+
+//     let dias = meses[mes1 - 1] - dia1 + dia2;
+//     dias = Number(dias);
+    
+//     for (let i = mes1; i < mes2 - 1; i++) {
+//         dias = dias + meses[i];
+        
+//     };
+
+    
+//     alert(`Quedan ${dias} hasta la fecha`)
+//     document.getElementById('fecha').innerHTML = `Quedan ${dias} hasta la fecha`
+// })
 
 //------------------>Final ejercicio 11
 
