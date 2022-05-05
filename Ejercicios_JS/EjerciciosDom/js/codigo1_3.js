@@ -20,7 +20,7 @@ document.getElementById('boton').addEventListener('click', () => {
     lista.innerHTML += listaG;
     
   }
-
+  
 
 })
 
@@ -51,18 +51,24 @@ document.getElementById('boton1').addEventListener('click', () => {
   let intoList = document.querySelectorAll('dt')
   let intoList2 = document.querySelectorAll('dd')
 
+  
+
   for (let i = 0; i < intoList.length; i++) {
     if (intoList[i].innerHTML == palabra) {
       intoList[i].style.display = 'none';
-    }
-    
-  }
-  for (let i = 0; i < intoList2.length; i++) {
-    if (intoList2[i].innerHTML == definicion) {
       intoList2[i].style.display = 'none';
+        
+      }
     }
+  
     
-  }
+  // }
+  // for (let i = 0; i < intoList2.length; i++) {
+  //   if (intoList2[i].innerHTML == definicion) {
+  //     intoList2[i].style.display = 'none';
+  //   }
+    
+  // }
 
 
 
