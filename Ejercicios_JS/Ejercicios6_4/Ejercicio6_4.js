@@ -464,43 +464,13 @@ document.getElementById('dias').addEventListener('click', ()=> {
         }
        
         let resultado = magic.toString()
-        console.log(resultado.replace(/,/g,''))
-    
+        console.log(resultado.replace(/,/g,''));
+       
+        document.getElementById('fecha').innerHTML = resultado.replace(/,/g,'');
 })
 
 
 
-// document.getElementById('dias').addEventListener('click', () => {
-//     let dia1 = document.getElementById('dia1').value;
-//     dia1 = Number(dia1);
-//     let mes1 = document.getElementById('mes1').value;
-//     mes1 = Number(mes1);
-//     let año1 = document.getElementById('año1').value;
-//     año1 = Number(año1);
-//     let dia2 = document.getElementById('dia2').value;
-//     dia2 = Number(dia2);
-//     let mes2 = document.getElementById('mes2').value;
-//     mes2 = Number(mes2);
-//     let año2 = document.getElementById('año2').value;
-//     año2 = Number(año2);
-
-
-//     const meses = [31,28,31,30,31,30,31,31,30,31,30,31];
-    
-
-
-//     let dias = meses[mes1 - 1] - dia1 + dia2;
-//     dias = Number(dias);
-    
-//     for (let i = mes1; i < mes2 - 1; i++) {
-//         dias = dias + meses[i];
-        
-//     };
-
-    
-//     alert(`Quedan ${dias} hasta la fecha`)
-//     document.getElementById('fecha').innerHTML = `Quedan ${dias} hasta la fecha`
-// })
 
 //------------------>Final ejercicio 11
 
