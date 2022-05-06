@@ -53,12 +53,13 @@ document.getElementById('boton1').addEventListener('click', () => {
 
   
 
-  for (let i = 0; i < intoList.length; i++) {
+  for (let i = 0; i <= intoList.length; i++) {
     if (intoList[i].innerHTML == palabra) {
       intoList[i].style.display = 'none';
       intoList2[i].style.display = 'none';
-        
+        i = intoList.length;
       }
+      
     }
   
     

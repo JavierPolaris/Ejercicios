@@ -15,7 +15,7 @@ document.getElementById('login').addEventListener('click', (evt) => {
         return;
     }
 
-    if (usuario == usuario1 && /^\d+$/g.test(value)) {
+    if (usuario == usuario1) {
         valido.innerText = "válido";
         intentos = 0;
 
