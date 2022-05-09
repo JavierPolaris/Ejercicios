@@ -87,6 +87,7 @@
    let dimension2 = 10
    let total = "";
    let space = dimension1 - 1;
+   let space1 = dimension1 - 1;
    
    // Creamos la parte superior desde dimension1 hasta dimension2, pero incrementamos de 2 en 2
    for (let i = dimension1; i <= (dimension2); i += 2){
@@ -94,12 +95,18 @@
            for (let j = 0; j < space; j++){
                total += '🤮';
        }
+         
+         
        // Decrementamos la variable de espacios
        space--;
        // Dibujamos los "+" desde 0 hasta el valor actual de i, que sería desde dimension1 hasta dimension2
        for (let j = 0; j < i; j++){
                total += '💩';
        }
+       // Dibujamos los espacios en cada ciclo al otro lado del hexagono
+       for (let j = 0; j < space +1; j++){
+        total += '🤮';
+}
        // Insertamos un salto de línea
        total += '\n'
    }
@@ -117,12 +124,16 @@
        for (let j = 0; j < i; j++){
                total += '💩';
        }
+        // Dibujamos los espacios en cada ciclo al otro lado del hexagono
+       for (let j = 0; j < space -1; j++){
+        total += '🤮';
+}
        total += '\n'
    }
    
    // Dibujamos el rombo
    alert(total)
-   console.log(alert)
+   
 })
     // for (let k = 0; k < (dimension2) - 1; k++) {
     //     for (let c = 1; c < space; c++) {
