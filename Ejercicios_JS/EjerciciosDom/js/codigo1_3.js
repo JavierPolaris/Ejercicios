@@ -14,7 +14,7 @@ document.getElementById('boton').addEventListener('click', () => {
     let newPalabra = "<dt>" + palabra + "</dt>";
     let newDefinicion = "<dd>" + definicion + "</dd>";
     listaG = newPalabra + newDefinicion;
-    // let listaM = "<dl>" + listaG + "</dl>";
+    
 
     let lista = document.getElementById("defect");
     lista.innerHTML += listaG;
@@ -46,33 +46,39 @@ document.getElementById('defect').innerHTML = defect;
 //Boton de eliminar
 document.getElementById('boton1').addEventListener('click', () => {
   var palabra = document.getElementById('palabra').value;
-  var definicion = document.getElementById('definicion').value;
+  // var definicion = document.getElementById('definicion').value;
   
   let intoList = document.querySelectorAll('dt')
   let intoList2 = document.querySelectorAll('dd')
 
   
-
-  for (let i = 0; i <= intoList.length; i++) {
-    if (intoList[i].innerHTML == palabra) {
-      intoList[i].style.display = 'none';
-      intoList2[i].style.display = 'none';
-        i = intoList.length;
-      }
-      
+  function buscar(intoList,palabra) {
+    let i = 0;
+    let encontrado = false;
+    while(!encontrado && i < infoList.length){
+      if (intoList[i].innerHTML == palabra) {
+            intoList[i].style.display = 'none';
+            intoList2[i].style.display = 'none';
+              encontrado = true;
+            }
+            i++
     }
-  
-    
-  // }
-  // for (let i = 0; i < intoList2.length; i++) {
-  //   if (intoList2[i].innerHTML == definicion) {
+    if (encontrado) {
+      return(i-1)
+    }
+    return -1
+  }
+  buscar(intoList,palabra)
+
+
+  // for (let i = 0; i <= intoList.length; i++) {
+  //   if (intoList[i].innerHTML == palabra) {
+  //     intoList[i].style.display = 'none';
   //     intoList2[i].style.display = 'none';
+  //       i = intoList.length;
+  //     }
+      
   //   }
-    
-  // }
-
-
-
 });
 
 
