@@ -1,16 +1,11 @@
-
+//pos 0 = 500; y ultima casilla importe total
 //Todos los datos tienen que venir de un formulario (input):
 //Introduccion de datos:
 //pos 0 = 500; y ultima casilla importe total
 let caja = [0, 0, 0, 1, 4, 8, 2, 5, 4, 0, 0, 1, 2, 3, 1, 0.0]; // Estan colocados en orden  descendente.
-
 const precioArticulo = 1050;
-    
 let pago = [2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.0];
-     
 let devolucion = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.0];
-      
-  
 // La función dineroTotal hace un sumatorio y multipliación del dinero total en la caja o en el pago.
 function dineroTotal(dinero) {
   for (let i = 0; i < dinero.length - 1; i++) {
@@ -67,11 +62,9 @@ function dineroTotal(dinero) {
 // Usamos en metodo toFixed para redondear a dos decimales.
   dinero[dinero.length - 1] = dinero[dinero.length - 1].toFixed(2);
 }
- // Nos muestra cuanto dinero total hay en caja y cuanto dinero me han pagado en total.
+// Nos muestra cuanto dinero total hay en caja y cuanto dinero me han pagado en total.
 dineroTotal(pago);
 dineroTotal(caja);
-  
-  
 // Creamos un string que nos devuelve cuantos billetes o monedas tenemos en la caja.(Por seprado).
 function mostrarDinero(dinero) {
   let mostrar = "";
@@ -131,7 +124,6 @@ function mostrarDinero(dinero) {
   }
   alert(mostrar); // Nos muestra la cantidad total de monedas y billetes(junto).
 }
-  
 // Nos devuelve la posición del array donde tengo que mirar. Para saber cuanto tengo que devolver.
 function rangoDevolucion(importeDevolucion) {
   if (importeDevolucion >= 500) {
@@ -166,7 +158,6 @@ function rangoDevolucion(importeDevolucion) {
     return 14;
   }
 }
-
 // Necesitamos traducir las posiciones a importes en euros o centimos.
 function valorPosicion(posicion) {
   switch (posicion) {
@@ -217,11 +208,10 @@ function valorPosicion(posicion) {
       break;
   }
 }
- // Nos devuelve cual es el cambio.
+// Nos devuelve cual es el cambio.
 devolucion[devolucion.length - 1] = pago[pago.length - 1] - precioArticulo; 
 // Aplicamos el metodo toFixed para redondear a dos decinmales.
 devolucion[devolucion.length - 1] = devolucion[devolucion.length - 1].toFixed(2); 
-
 if (devolucion[devolucion.length - 1] == 0) { // Caso de devolucion 0 o pago justo.
   console.log("Gracias, vuelva pronto ");
   mostrarDinero(devolucion);
@@ -233,30 +223,53 @@ if (devolucion[devolucion.length - 1] == 0) { // Caso de devolucion 0 o pago jus
       console.log("Importe insuficiente");
     } else {                                     // Tenemos dinero para devolver.
       for ( 
-        let i = rangoDevolucion(devolucion[devolucion.length - 1]);   // ¿? Explicar que hace este for y comentarlo:
-        //nos recorre cada hueco de nuestra caja(array) donde miramos que devolvemos y termina cuando recorre el dinero que tenemos en caja.
-        i < caja.length - 1;
+        let i = rangoDevolucion(devolucion[devolucion.length - 1]);  
+        i < caja.length - 1; // La ultima casilla del array de caja tiene la cantidad final del dinero de la caja.
         i++
       ) {
-        if (caja[i] != 0) { 
-          let valorPosicion1 = valorPosicion(i);
+        if (caja[i] != 0) {  // Si en la caja de i hay billetes o monedas disintas de 0.
+  // La variable valorposicion1 se refiere a que billete o moneda conrresponde el billete en el array.
+          let valorPosicion1 = valorPosicion(i); 
+  //  La cantidad de billetes y monedas multiplicado por el valor de la posicion, si es mayor o igual que la cantidad que tengo que devolver.
           if (caja[i] * valorPosicion1 >= devolucion[devolucion.length - 1]) {
-            let cantidad = Math.floor(
+  // La variable cantidad nos dice la cantidad de billetes o monedas que tengo que usar para devolver el cambio.
+            let cantidad = Math.floor( // Usamos Math.floor para redondear la cantidad.
               devolucion[devolucion.length - 1] / valorPosicion1
             );
+  // Restar a lo que hay que devolver, lo que le he entregado al usuario.
             devolucion[devolucion.length - 1] -= valorPosicion1 * cantidad;
-            devolucion[devolucion.length - 1] =
-              devolucion[devolucion.length - 1].toFixed(2);
-            caja[i] -= cantidad;
-            devolucion[i] = cantidad;
+  // Lo que tenemos que devolver lo redondeamos.
+            devolucion[devolucion.length - 1] = devolucion[devolucion.length - 1].toFixed(2); // -toFixed lo usamos para redondear decimales.
+            caja[i] -= cantidad; // Restamos a la poscion de la caja la cantidad que le doy al usuario.
+            devolucion[i] = cantidad; // En el array devolución meto la cantidad de billetes que tengo que devolver.
             console.log("cantidad " + cantidad);
             console.log("devolucion " + devolucion);
             console.log("caja " + caja);
             console.log("valorPosicion1 " + valorPosicion1);
+            caja[caja.length-1] -= valorPosicion1 * cantidad; // Le resto el dinero que tengo en caja lo que le acabo de dar al usuario.
+          } else { // Este else significa que o no tengo monedas o billetes suficientes en esa casilla o momento en la caja o no puedo devolver el dinero. 
+            devolucion[devolucion.length - 1] -= valorPosicion1 * caja[i]; // Resto lo que puedo devolver.
+            devolucion[i] = caja[i]; // Todos los billetes o monedas que habia en ese casilla lo añado a devolucion.
+            caja[i] = 0; // Quito en billete o moneda de la caja, la dejo a 0.
+            caja[caja.length-1] -= valorPosicion1 * caja[i]; // Le resto el dinero que tengo en caja lo que le acabo de dar al usuario. 
           }
         }
+      } 
+      if (devolucion[devolucion.length - 1] > 0) { // No tenia suficiente monedas o billetes a devolver.
+        alert("No tenemos suficiente cambio");
+        for(let i = 0; i < devolucion.length-1; i++) {
+          caja[i] += devolucion[i]; // Metemos el dinero de la devolucion en la caja de nuevo.
+          devolucion[i] = 0;  // Ponemos la casilla a 0 porque le quitamos los billetes al usuario.
+        }
+        dineroTotal(caja)
+      }  else {
+        mostrarDinero(devolucion);
+        for(let i = 0; i < pago.length-1; i++) {
+          caja[i] += pago[i]; // Metemos el dinero del pago en la caja de nuevo.
+          pago[i] = 0;  // Ponemos la casilla a 0 porque le cobramos los billetes al usuario.
+        }  
+        dineroTotal(caja)
       }
-      mostrarDinero(devolucion);
     }
   }
 }
