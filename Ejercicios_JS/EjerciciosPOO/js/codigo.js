@@ -83,11 +83,20 @@
  document.getElementById('btn').addEventListener('click', (e) => {
    e.preventDefault();
    
+        class hexagono  {
+                constructor(dimension1,dimension2) {
+                        this.dimension1 = dimension1;
+                        this.dimension2 = dimension2;
+
+                }
+        }
+
+
    let dimension1 = 4
    let dimension2 = 10
    let total = "";
    let space = dimension1 - 1;
-   let space1 = dimension1 - 1;
+  
    
    // Creamos la parte superior desde dimension1 hasta dimension2, pero incrementamos de 2 en 2
    for (let i = dimension1; i <= (dimension2); i += 2){
