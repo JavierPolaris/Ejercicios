@@ -135,16 +135,7 @@
    alert(total)
    
 })
-    // for (let k = 0; k < (dimension2) - 1; k++) {
-    //     for (let c = 1; c < space; c++) {
-    //         total += ' ';
-    //     }
-    //     space ++;
-    //     for (let c = 0; c < dimension2 + (k * 2); c++) {
-    //         total += '+';
-    //     }
-    //     total += '\n'
-    // }
+    
     
     
    
