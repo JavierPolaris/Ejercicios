@@ -237,16 +237,26 @@ console.log(merendola)
 document.getElementById('boton').addEventListener('click', (e) => {
     e.preventDefault();
 
-    var entrada1 = document.getElementById('entrada').value;
+    var entrada = document.getElementById('entrada').value;
+    var entrada1 = document.getElementById('entrada1').value;
+    var entrada2 = document.getElementById('entrada2').value;
+    var entrada3 = document.getElementById('entrada3').value;
+    var entrada4 = document.getElementById('entrada4').value;
+    var entrada5 = document.getElementById('entrada5').value;
     var numeros= [];
-    var cadena = numeros.push(entrada1);
+     numeros.push(entrada);
+     numeros.push(entrada1);
+     numeros.push(entrada2);
+     numeros.push(entrada3);
+     numeros.push(entrada4);
+     numeros.push(entrada5);
 
     
     console.log(numeros)
     // var array = [4,2,1,5,7,7];
-    var boll = new Boolean(entrada[0] > entrada[2]);
-    var boll1 = new Boolean(entrada[1] < entrada[3]);
-    var boll2 = new Boolean(entrada[4] == entrada[5]);
+    var boll = new Boolean(numeros[0] > numeros[2]);
+    var boll1 = new Boolean(numeros[1] < numeros[3]);
+    var boll2 = new Boolean(numeros[4] == numeros[5]);
 
     if (boll.valueOf() && boll1.valueOf() && boll2.valueOf()) {
         console.log("Esta ordenado")
@@ -273,6 +283,108 @@ document.getElementById('boton').addEventListener('click', (e) => {
 // console.log(typeof(string1));
 // console.log(typeof(string4));
 // console.log(typeof(string4[nombreF]));
+
+
+// TODO Ejercicio 7_4
+// TODO Solicita una cadena al usuario e indica la cantidad de veces
+// TODO que aparece la a en las palabras impares
+// Todo Solicita una cadena al usuario y devuélvela invertida
+// TODO Ej: "Hola, ¿qué tal estás?" -> estás? tal ¿qué Hola,
+
+document.getElementById('boton1').addEventListener('click', (e) => {
+    e.preventDefault();
+    
+
+    let cadena = document.getElementById('entrada6').value;
+    let nuevaCadena = cadena.split(" ")
+    var cont = 0
+    var letra = "a"
+    for (let i = 0; i < nuevaCadena.length; i++) {
+        if(nuevaCadena[i].length%2==1){
+            var impar = nuevaCadena[i]
+            for (let j = 0; j < impar.length; j++) {
+                if(impar[j] == letra){
+                    cont++
+                }
+            }
+        }
+    }
+    console.log(cont)
+
+
+
+
+})
+
+
+
+
+let frutas = ["Manzana", "Banana", "Fresa", "Piña"];
+
+let frutasObject = new Array(["Cereza", "Papaya"], ["Pera", "Sandía"]);
+
+//forEach
+frutas.forEach(element => {
+    console.log(element);
+});
+
+// //for tradicional equivalente
+for (let i = 0; i < frutas.length; i++) {
+    console.log(frutas[i]);    
+}
+
+//forEach
+frutasObject.forEach(element => {
+    console.log(element);
+});
+
+// //for tradicional equivalente
+// for (let i = 0; i < frutasObject.length; i++) {
+//     console.log(frutasObject[i]);    
+// }
+
+//forEach
+frutasObject.forEach(element => {
+    element.forEach(element2 => {
+        console.log(element2);
+    });
+});
+
+// //for tradicional equivalente
+// for (let i = 0; i < frutasObject.length; i++) {
+//     for (let j = 0; j < frutasObject[i].length; j++) {
+//         console.log(frutasObject[i][j]);
+//     }
+// } 
+
+//forEach 
+frutasObject.forEach(element => {
+    element.forEach(element2 => {
+    for(l of element2){
+        console.log(l);
+    }
+    console.log("Fin Fruta");
+    });
+});
+
+// //for tradicional equivalente
+// let frutasObject = new Array(["Cereza", "Papaya"], ["Pera", "Sandía", "Melocotón"]);
+
+// /* 
+// Cereza Papaya
+//  Pera  Sandía  Melocotón
+// dos filas, dos columnas
+// */
+
+// for (let i = 0; i < frutasObject.length; i++) { //para recorrer filas (2)
+//     for (let j = 0; j < frutasObject[i].length; j++) { // recorrer columnas (si es regular no hace falta el[i])
+//         for (let k = 0; k < frutasObject[i][j].length; k++){ // recorrer cada letra
+//             console.log(frutasObject[i][j][k]);
+//         }
+//         console.log("Fin palabra");
+//     }
+    
+// }
 
 
 // let frutas = ["Manzana", "Banana"];
