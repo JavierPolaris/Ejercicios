@@ -1,33 +1,58 @@
-//TODO Ejercicio 7_3
-//TODO Utilizando objetos Boolean realiza un programa que indique si un array de 6 elementos solicitado al usuario se encuentra ordenado de la siguiente forma (e1 > e3, e2 < e4 y e5 = e6)
-document.getElementById('boton').addEventListener('click', (e) => {
+// TODO Ejercicio 7_4
+// TODO Solicita una cadena al usuario e indica la cantidad de veces
+// TODO que aparece la a en las palabras impares
+
+
+document.getElementById('boton1').addEventListener('click', (e) => {
     e.preventDefault();
-
-    var entrada = document.getElementById('entrada').value;
-    var entrada1 = document.getElementById('entrada1').value;
-    var entrada2 = document.getElementById('entrada2').value;
-    var entrada3 = document.getElementById('entrada3').value;
-    var entrada4 = document.getElementById('entrada4').value;
-    var entrada5 = document.getElementById('entrada5').value;
-    var numeros= [];
-     numeros.push(entrada);
-     numeros.push(entrada1);
-     numeros.push(entrada2);
-     numeros.push(entrada3);
-     numeros.push(entrada4);
-     numeros.push(entrada5);
-
     
-    console.log(numeros)
-    // var array = [4,2,1,5,7,7];
-    var boll = new Boolean(numeros[0] > numeros[2]);
-    var boll1 = new Boolean(numeros[1] < numeros[3]);
-    var boll2 = new Boolean(numeros[4] == numeros[5]);
 
-    if (boll.valueOf() && boll1.valueOf() && boll2.valueOf()) {
-        console.log("Esta ordenado")
-    } else {
-        console.log('todo mal')
+    let cadena = document.getElementById('entrada6').value;
+    let nuevaCadena = cadena.split(" ")
+    var cont = 0
+    var letra = "a"
+    for (let i = 0; i < nuevaCadena.length; i++) {
+        if(nuevaCadena[i].length%2==1){
+            var impar = nuevaCadena[i]
+            for (let j = 0; j < impar.length; j++) {
+                if(impar[j] == letra){
+                    cont++
+                }
+            }
+        }
+    }
+    console.log(cont)
+    document.getElementById('salida1').innerText = cont
+ 
+
+
+});
+
+
+
+// Todo Solicita una cadena al usuario y devuélvela invertida
+// TODO Ej: "Hola, ¿qué tal estás?" -> estás? tal ¿qué Hola,
+
+document.getElementById('boton2').addEventListener('click', (e) => {
+    e.preventDefault();
+    
+
+    let cadena1 = document.getElementById('entrada7').value;
+let newCadena = [];
+function invertir(cadena1) {
+    let array = cadena1.split(' ');
+    let larga = array.length;
+
+    for (let i = 0; i < larga; i++) {
+        newCadena.push(array.pop());
+        
     }
 
-})
+    return newCadena.join(' ');
+}
+
+
+console.log(invertir(cadena1))
+document.getElementById('salida2').innerText = invertir(cadena1)
+
+});
