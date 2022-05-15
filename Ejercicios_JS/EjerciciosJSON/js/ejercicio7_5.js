@@ -80,4 +80,50 @@ console.log(`${nuevoArray[0][1]} ${nuevoArray[2][1]}`)
 // Elemento1: 1
 // Elemento2: 1
 // ElementoN: ElementoN-1 + ElementoN-2
+
+  
+  document.getElementById('boton1').addEventListener('click', (e) => {
+  let n = document.getElementById('numero').value;
+  let arrayNum = [1,1]
+  
+  for (let i = 2; i <= n; i++) {
+    arrayNum[i] = arrayNum [i - 1] + arrayNum[i - 2]
+    // array[i] = arrayFib(i + 1);
+  }
+  document.getElementById('salida1').innerText = `la cadena es ${arrayNum}`
+
+  console.log(arrayNum);
+})
+
 // Solicita al usuario un array de máximo 10 números reales y calcula su media.
+
+document.getElementById('boton2').addEventListener('click', (e)=> {
+    e.preventDefault();
+    let cadena = document.getElementById('numero1').value;
+    var nuevoNumero = cadena.split(" ");
+    console.log(nuevoNumero)
+    let newNum = [];
+    nuevoNumero.forEach(element => {
+        // let element1 = parseInt(element)
+        newNum.push(parseInt(element));
+    });
+    if (newNum.length <= 10) {
+        console.log(newNum)
+    
+        let suma = newNum.reduce(function(antiguo, nuevo){
+            return antiguo + nuevo;
+        });
+    
+        console.log(suma)
+        let media = suma / newNum.length;
+    
+        document.getElementById('salida2').innerText = `la media es ${media}`
+    
+    console.log(media)
+    }else {
+        alert('Maximo 10 numeros')
+    }
+   
+})
+
+
