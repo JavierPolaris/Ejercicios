@@ -10,7 +10,9 @@ let contador = 0;
 
 document.getElementById('boton').addEventListener('click', (e) => {
     e.preventDefault();
+    let nombre =  document.getElementById('nombre').value;
     let email =  document.getElementById('email').value;
+    
     // `usuario_${contador}`
     
     localStorage.setItem(`usuario_${contador}`, JSON.stringify({
@@ -19,6 +21,7 @@ document.getElementById('boton').addEventListener('click', (e) => {
         mensaje :  document.getElementById('mensaje').value
         
     }))
+    alert(`el usuario ${nombre} con email: ${email} ha sido registrado`)
     contador++
  
 
@@ -38,11 +41,15 @@ document.getElementById('boton1').addEventListener('click', (e) => {
 
     for(let i=0; i<localStorage.length; i++) {
         let key = localStorage.key(i);
-        console.log(`${JSON.parse(localStorage.getItem(key)).email}`);
+        // console.log(`${JSON.parse(localStorage.getItem(key)).email}`);
        if (`${JSON.parse(localStorage.getItem(key)).email}` == valorInput) {
         localStorage.removeItem(key)
-       }
+        alert(`el usuario ha sido borrado`)
+       } 
     }
+       
+    
+   
     // for (let i = 0; i < user.length; i++) {
     //     let mierda = user[i];
     //     console.log(mierda.length)
