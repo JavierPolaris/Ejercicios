@@ -83,17 +83,18 @@
  document.getElementById('btn').addEventListener('click', (e) => {
    e.preventDefault();
    
-        class hexagono  {
-                constructor(dimension1,dimension2) {
-                        this.dimension1 = dimension1;
-                        this.dimension2 = dimension2;
+        // class hexagono  {
+        //         constructor(dimension1,dimension2) {
+        //                 this.dimension1 = dimension1;
+        //                 this.dimension2 = dimension2;
 
-                }
-        }
+        //         }
+        // }
 
 
    let dimension1 = 4
    let dimension2 = 10
+
    let total = "";
    let space = dimension1 - 1;
   
@@ -142,6 +143,7 @@
    
    // Dibujamos el rombo
    alert(total)
+  
    
 })
     

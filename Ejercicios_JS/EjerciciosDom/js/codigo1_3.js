@@ -55,7 +55,7 @@ document.getElementById('boton1').addEventListener('click', () => {
   function buscar(intoList,palabra) {
     let i = 0;
     let encontrado = false;
-    while(!encontrado && i < infoList.length){
+    while(!encontrado && i < intoList.length){
       if (intoList[i].innerHTML == palabra) {
             intoList[i].style.display = 'none';
             intoList2[i].style.display = 'none';
