@@ -37,9 +37,10 @@ document.getElementById('btn').addEventListener('click', (e) => {
         var urlCortada = (url.message.split('/'));
         razas.push(urlCortada[4])
         console.log(razas);
-       
+       document.getElementById('salidaPerro').innerHTML = `Raza: ${urlCortada[4]}`
     }
     cont++; //cada vez que doy al boton pasa al siguiente cuado
+
 });
 
 

@@ -1,36 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:wght@100&family=Roboto+Slab&family=Space+Mono&family=Staatliches&display=swap');
 
 
+
+
 body {
-    background-color: rgb(5, 54, 96);
+    /* background-color: rgb(0, 0, 0); */
+    
+    background-image: linear-gradient(115deg,
+            rgba(25, 21, 0, 0.5),
+            rgba(117, 75, 0, 0.7)),
+        url(https://biotechmagazineandnews.com/wp-content/uploads/2019/10/perros.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 777px;
+    /* background-position: center; */
 }
-.cabecera{
+
+span {
+
+    font: 700 4em/1 "Oswald", sans-serif;
+    letter-spacing: 0;
+    padding: 1px 0 1px;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+
+@-webkit-keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+#cabecera {
+    background-color: #ec4915;
+    margin-bottom: 33px;
+    height: 121px;
+    width: 600px;
+    margin-bottom: 113px;
+}
+
+.cabecera {
     color: white;
-    padding: 0px 0px 21px 0px;
+    /* padding: 0px 0px 21px 0px; */
     display: flex;
-    justify-content: center;
     font-family: 'Koulen', cursive;
     font-size: 50px;
-    
+    justify-content: space-around;
+
 }
 
 
-div{
-    border: 3px solid rgb(252, 252, 252);
+div {
+    border: 3px solid rgb(221, 221, 221);
 }
-.parent { 
-    display: grid; 
+
+#cont_img {
+    background: rgba(250, 250, 250, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(242, 242, 242, 0.37);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+
+
+}
+
+#salidaPerro {
+    display: flex;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.parent {
+    display: grid;
     /* grid-template-columns: repeat(5, 1fr); 
     grid-template-rows: repeat(4, 1fr); 
     grid-column-gap: 0px;
     grid-row-gap: 0px;  */
     grid-template-columns: 94px 94px 94px 94px 94px;
     grid-template-rows: 94px 94px 94px 94px;
-   
+
+
 }
-.box {
-  
-}
+
 
 .perro {
     display: grid;
@@ -39,7 +110,7 @@ div{
     /* border: 3px solid #000; */
     width: 208px;
     height: 208px;
-    cursor: move;
+    border-radius: 10px;
 }
 
 #perro1,
@@ -61,17 +132,18 @@ div{
 #perro17,
 #perro18,
 #perro19,
-#perro20
-{
+#perro20 {
     width: 90px;
     height: 90px;
 }
-    
+
 #organizador {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-direction: row;
 }
+
 #img_btn {
     display: flex;
     flex-direction: column;
@@ -93,9 +165,9 @@ div{
 
 
 #btn:hover {
-   
+
     background-color: white;
-    color:#000;
+    color: #000;
     transition: 1s ease;
 }
 
@@ -116,8 +188,3 @@ div{
     background: white;
     top: 50px;
 }
-
-
-    
-
-    
